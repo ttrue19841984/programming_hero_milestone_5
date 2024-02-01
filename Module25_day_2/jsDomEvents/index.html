@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dom Element</title>
+</head>
+<body>
+    <h1> DOM er ajke epeshal element</h1>
+    <button onclick="makeRed()">Click Me1</button>
+    <button id="make-purple">Click Me2</button>
+    <button id="make-pink">Click Me3</button>
+    <button id="make-green">Click Me4</button>
+    <button id="make-yellow">Click Me5</button>
+
+
+
+
+
+
+
+    <script src="js/event.js"></script>
+
+    <script>
+        // option-2 (we use this sometimes)
+        function makeRed(){
+            document.body.style.backgroundColor='red';
+        }
+        // option-3
+        const purpleButton = document.getElementById('make-purple');
+        purpleButton.onclick = function makePurple(){
+            document.body.style.backgroundColor = 'purple'
+        }
+        // option-4
+        const pinkButton = document.getElementById('make-pink');
+        pinkButton.addEventListener('click', makepink)
+        function makepink(){
+            document.body.style.backgroundColor = 'pink'
+        }
+        // option-5
+        const greenButton = document.getElementById('make-green');
+        greenButton.addEventListener('click', function makeGreen(){
+            document.body.style.backgroundColor = 'green';
+        })
+        // option-6 final (Use every time)
+        document.getElementById('make-yellow').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'yellow';
+        }) 
+
+    </script>
+</body>
+</html>

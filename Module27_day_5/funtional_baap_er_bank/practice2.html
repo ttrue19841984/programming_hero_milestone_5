@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Price: <span id="price">1000</span></h1>
+      <label>Cupon</label>
+      <input id="input-price" type="text" placeholder="DISC-30%" />
+      <button id="btn">Apply</button>
+      <h3>Please Pay: <span id="discount">00</span></h3>
+    </div>
+
+    <script>
+      document.getElementById("input-price").addEventListener("keyup", function () {
+        const text = event.target.value;
+        if (text === "DISC-30%") {
+          document.getElementById("btn").addEventListener("click", function () {
+            const priceString = document.getElementById("price").innerText;
+            const price = parseFloat(priceString);
+            const discountPrice = 0.3 * price;
+            const total = price - discountPrice;
+            document.getElementById("discount").innerText = total;
+          });
+        }else{
+            document.getElementById("btn").addEventListener("click", function () {
+            const priceString = document.getElementById("price").innerText;
+            const price = parseFloat(priceString);
+            document.getElementById("discount").innerText = price;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-3xl font-bold text-center mt-10 bg-secondary">ALI Flower cards</h1>
+    </header>
+    <main>
+        <div class="grid grid-cols-4 gap-6 mt-10 ">
+            <!-- first card -->
+        <div class="card  bg-gray-400 shadow-xl">
+            <figure><img class="p-10" src="images/mongo.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Life</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <h6>price: 10 $</h6>
+              <div class="card-actions ">
+                <button onclick="handleClick(this)" class="btn btn-primary w-full">Add to Card</button>
+              </div>
+            </div>
+          </div>
+          <!-- second card -->
+
+        <div class="card  bg-violet-400 shadow-xl">
+            <figure><img class="p-10" src="images/nodejs.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">javaScript</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <h6>price: 30 $</h6>
+              <div class="card-actions ">
+                <button onclick="handleClick(this)" class="btn btn-primary w-full">Add to Card</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- third card -->
+        <div class="card  bg-red-300 shadow-xl">
+            <figure><img class="p-10" src="images/react.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">react</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <h6>price: 100 $</h6>
+              <div class="card-actions ">
+                <button onclick="handleClick(this)" class="btn btn-primary w-full">Add to Card</button>
+              </div>
+            </div>
+          </div>
+          <!-- fourth card -->
+          <div class="card  bg-base-100 shadow-xl">
+            <h4 class="text-2xl font-bold text-center">Code: Hero</h4>
+            <div class="selected-item" id="selected-items">
+                
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">total: <span id="total-price">00</span></h2>
+              <h2 class="card-title">discount: <span id="discount-price">00</span></h2>
+              <hr>
+              <h6 class="card-title">Ground Total: <span id="ground-total">00</span></h6>
+            </div>
+            <div></div>
+          </div>
+          
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
